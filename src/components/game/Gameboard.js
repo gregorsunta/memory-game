@@ -1,24 +1,17 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import Card from './Card';
-import useFetchData from './customHooks/useFetchData';
+import getRandomIds from './customHooks/getRandomIds';
+import useLevels from './customHooks/useLevels';
 
-const Container = styled.div`
-  background-color: red;
-  width: 100px;
-  height: 100px;
-`;
+const Gameboard = ({ numberOfCards, range }) => {
+  const [level, setLevel] = useLevels(0);
 
-const Gameboard = ({ range }) => {
-  const generateRandomIds = () => {
-    const [start, end] = range;
-  };
   return (
-    <Container>
+    <div>
       {ids.map((id) => {
-        <Card id={id} />;
+        return <Card cardInfo={cardInfo} />;
       })}
-    </Container>
+    </div>
   );
 };
 export default Gameboard;
