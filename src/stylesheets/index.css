@@ -1,0 +1,13 @@
+@import url(./reset-styles.css);
+/* @import url(./fonts.css); */
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Ubuntu';
+}
+#app {
+  background-color: aqua;
+  width: 100%;
+  min-height: 100vh;
+}
