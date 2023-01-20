@@ -1,4 +1,4 @@
-const getRandomIds = (numberOfCards, range) => {
+const getRandomIds = ({ numberOfCards, range }) => {
   const generateRandomIds = (numberOfCards, range) => {
     let ids = [];
     const generateRandomId = () => {
