@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url(./fonts/Ubuntu/Ubuntu-Regular.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
   font-weight: 500;
 }
 @font-face {
@@ -12,18 +12,18 @@
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url(./fonts/Ubuntu/Ubuntu-Bold.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf);
   font-weight: 700;
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url(./fonts/Ubuntu/Ubuntu-LightItalic.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-LightItalic.ttf);
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url(./fonts/Ubuntu/Ubuntu-Italic.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Italic.ttf);
   font-weight: 500;
   font-style: italic;
 }
