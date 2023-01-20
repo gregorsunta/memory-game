@@ -12,9 +12,12 @@ const fetchCardsWithIds = async (ids) =>
 const fetchCards = async (levelInfo) => {
   const ids = getIdsFromLevelInfo(levelInfo);
   const cards = await fetchCardsWithIds(ids);
+  console.log(cards);
+
   return cards.map((card) => {
     return {
-      img: card.sprites.other.dream_world.front_default,
+      img: card.sprites.other['official-artwork']
+        .front_default,
       isClicked: false,
     };
   });

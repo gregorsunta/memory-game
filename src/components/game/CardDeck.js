@@ -16,10 +16,17 @@ const CardDeck = ({ cards, handleClick }) => {
     <Div>
       {cards?.map((card) => (
         <Card
+          card={card}
           key={card.id}
           id={card.id}
-          img={card.img}
-          handleClick={handleClick.bind(card)}
+          img={
+            card.img
+              ? card.img
+              : console.log(
+                  'card.img is not defined look:',
+                ) && console.log(card)
+          }
+          handleClick={handleClick}
         />
       ))}
     </Div>

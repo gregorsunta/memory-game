@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const StyledScoreboard = styled.div``;
 const P = styled.p``;
-const Scoreboard = ({ level, score }) => {
+const Scoreboard = ({ score, highestScore }) => {
   return (
     <StyledScoreboard>
-      <P>Level: {level}</P>
-      <P>Current score:{score}</P>
+      <P>Highest score: {highestScore}</P>
+      <P>Current score: {score}</P>
     </StyledScoreboard>
   );
 };

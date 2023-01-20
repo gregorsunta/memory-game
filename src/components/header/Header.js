@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { MAIN } from '../../stylesheets/variables';
 import Logo from './Logo';
 import Scoreboard from './Scoreboard';
+import useGame from 'components/customHooks/useGame';
 
 const HeaderEl = styled.header`
   display: flex;
@@ -13,11 +14,14 @@ const HeaderEl = styled.header`
   background-color: ${MAIN.INDIGO_1};
 `;
 
-const Header = () => {
+const Header = ({ score, highestScore }) => {
   return (
     <HeaderEl>
       <Logo />
-      <Scoreboard />
+      <Scoreboard
+        score={score}
+        highestScore={highestScore}
+      />
     </HeaderEl>
   );
 };

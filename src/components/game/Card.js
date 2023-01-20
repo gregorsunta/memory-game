@@ -10,11 +10,25 @@ const Img = styled.img`
   background-color: ${MAIN.INDIGO_1};
   width: 10rem;
   height: 10rem;
+  &:hover {
+    background-color: ${MAIN.INDIGO_2};
+  }
+  &:active {
+    background-color: ${MAIN.INDIGO_3};
+  }
 `;
 
-const Card = ({ img, handleClick }) => {
+const Card = ({ card, img, handleClick }) => {
   return (
-    <>{<Img src={img} alt="" onClick={handleClick} />}</>
+    <>
+      {
+        <Img
+          src={img}
+          alt=""
+          onClick={handleClick.bind(this, card)}
+        />
+      }
+    </>
   );
 };
 export default Card;

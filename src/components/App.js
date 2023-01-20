@@ -2,13 +2,34 @@ import { useState, useEffect } from 'react';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import Gameboard from './game/Gameboard';
+import Game from './game/Game';
+import useGame from './customHooks/useGame';
 
 function App() {
+  const [
+    cards,
+    level,
+    score,
+    highestScore,
+    hasEnded,
+    handleClick,
+    startLevel,
+  ] = useGame();
+
+  useEffect(() => {
+    startLevel();
+  }, [level]);
+
   return (
     <div id="app">
-      <Header />
-      <Gameboard />
+      <Header score={score} highestScore={highestScore} />
+      <Game
+        hasEnded={hasEnded}
+        score={score}
+        highestScore={highestScore}
+        cards={cards}
+        handleClick={handleClick}
+      />
       <Footer />
     </div>
   );
