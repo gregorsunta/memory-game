@@ -12,11 +12,14 @@ function App() {
     score,
     highestScore,
     hasEnded,
+    hasDefeated,
     handleClick,
     startLevel,
+    resetGame,
   ] = useGame();
 
   useEffect(() => {
+    console.log(level);
     startLevel();
   }, [level]);
 
@@ -24,11 +27,14 @@ function App() {
     <div id="app">
       <Header score={score} highestScore={highestScore} />
       <Game
-        hasEnded={hasEnded}
+        level={level}
         score={score}
         highestScore={highestScore}
         cards={cards}
+        hasEnded={hasEnded}
+        hasDefeated={hasDefeated}
         handleClick={handleClick}
+        resetGame={resetGame}
       />
       <Footer />
     </div>

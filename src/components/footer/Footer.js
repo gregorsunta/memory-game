@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>Copyright</p>
+      <p>Copyright © gregorsunta</p>
     </StyledFooter>
   );
 };

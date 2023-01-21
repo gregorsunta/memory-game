@@ -12,7 +12,6 @@ const fetchCardsWithIds = async (ids) =>
 const fetchCards = async (levelInfo) => {
   const ids = getIdsFromLevelInfo(levelInfo);
   const cards = await fetchCardsWithIds(ids);
-  console.log(cards);
 
   return cards.map((card) => {
     return {

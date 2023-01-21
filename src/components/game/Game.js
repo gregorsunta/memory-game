@@ -7,15 +7,44 @@ import EndScreen from './EndScreen';
 
 const StyledGame = styled.div`
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+`;
+const StyledP = styled.p`
+  padding: 1rem;
+  font-size: 2rem;
 `;
 
-const Game = ({ hasEnded, score, cards, handleClick }) => {
+const Game = ({
+  cards,
+  level,
+  score,
+  highestScore,
+  hasEnded,
+  hasDefeated,
+  handleClick,
+  startLevel,
+  resetGame,
+}) => {
   return (
     <StyledGame>
-      {hasEnded ? (
-        <EndScreen score={score} />
-      ) : (
+      <StyledP>Level: {level.index}</StyledP>
+
+      {!hasEnded && (
         <CardDeck cards={cards} handleClick={handleClick} />
+      )}
+      {hasEnded && (
+        <EndScreen
+          score={score}
+          message={
+            hasDefeated
+              ? 'You have defeated the game, congratulations!'
+              : 'DEFEAT'
+          }
+          resetGame={resetGame}
+        />
       )}
     </StyledGame>
   );

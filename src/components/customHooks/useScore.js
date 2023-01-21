@@ -4,9 +4,10 @@ const useScore = () => {
   const [score, setScore] = useState(0);
   const [highestScore, setHighestScore] = useState(0);
   const incrementScore = () => {
-    setScore(score + 1);
-    if (score > highestScore) {
-      setHighestScore(score);
+    const newScore = score + 1;
+    setScore(newScore);
+    if (newScore > highestScore) {
+      setHighestScore(newScore);
     }
   };
   const resetScore = () => {
